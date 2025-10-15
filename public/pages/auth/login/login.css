@@ -1,0 +1,48 @@
+/* ===== 전체 페이지 배경 및 정렬 ===== */
+body {
+    margin: 0;
+    background-color: #f7f8fa;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  }
+  
+  .login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .login-section {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    padding: 50px 60px;
+    width: 380px;
+    text-align: center;
+  }
+  
+  .page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+  }
+  
+  /* 회원가입 안내 */
+  .signup-cta {
+    margin-top: 22px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .signup-cta a {
+    color: #4b6ef5;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .signup-cta a:hover {
+    text-decoration: underline;
+  }
+  
