@@ -2,37 +2,22 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>로그인 | Community App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 | Community App</title>
 
-  <link rel="stylesheet" href="../../../component/header/navigator/navigator.css" />
-  <link rel="stylesheet" href="../../../component/footer/footer.css" />
-
-  <link rel="stylesheet" href="./login.css" />
-
-  <link rel="stylesheet" href="../../../component/body/login-form/login-form.css" />
-
-  <script type="module" src="../../../component/header/navigator/navigator.js" defer></script>
-  <script type="module" src="../../../component/footer/footer.js" defer></script>
-
-  <script type="module" src="./login.js" defer></script>
+    <link rel="stylesheet" href="../../../component/body/login_wrap/login_wrap.css" />
+    <script type="module" src="login.js" defer></script>
 </head>
 
 <body>
-  <header id="header-root"></header>
-
-  <main class="container">
-    <section class="login-page">
-      <div class="login-section">
-        <h1 class="page-title">로그인</h1>
-
-        <div id="login-form-root"></div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="footer-root"></footer>
+    <div class="wrap">
+        <main id="container" class="container">
+            <div class="content">
+                <div id="login_wrap" class = "login_wrap"></div>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>
