@@ -1,7 +1,5 @@
-// login_wrap.js
 export function renderLoginWrap(rootEl) {
   rootEl.innerHTML = `
-    <h1 class="page-title">로그인</h1>
 
     <div class="input_item input_item_id">
       <label for="email">이메일</label>
@@ -15,7 +13,7 @@ export function renderLoginWrap(rootEl) {
 
     <button type="button" class="btn_login_button">로그인</button>
 
-    <p class="signup-cta">
+    <p class="signup_cta">
       아직 회원이 아니신가요?
       <a href="../signup/signup.html">회원가입</a>
     </p>

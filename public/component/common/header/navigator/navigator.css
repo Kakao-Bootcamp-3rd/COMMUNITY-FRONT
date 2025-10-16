@@ -1,0 +1,14 @@
+.navigator {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+@media (max-width: 480px) {
+    .navigator {
+        font-size: 1.1rem;
+    }
+}

@@ -1,5 +1,3 @@
-/* public/component/body/login_wrap/login_wrap.css */
-
 .login_wrap {
   width: 100%;
   max-width: 380px;
@@ -13,7 +11,7 @@
   align-items: stretch;
 }
 
-.page-title {
+.page_title {
   font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
@@ -65,20 +63,20 @@
   background-color: #3a74db;
 }
 
-.signup-cta {
+.signup_cta {
   text-align: center;
   font-size: 0.9rem;
   color: #555;
   margin-top: 20px;
 }
 
-.signup-cta a {
+.signup_cta a {
   color: #4b8cff;
   font-weight: 600;
   text-decoration: none;
   margin-left: 4px;
 }
 
-.signup-cta a:hover {
+.signup_cta a:hover {
   text-decoration: underline;
 }

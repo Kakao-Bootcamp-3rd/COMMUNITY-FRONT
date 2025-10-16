@@ -1,45 +1,35 @@
-/* ===== 기본 레이아웃 ===== */
 body {
     margin: 0;
     background-color: #f7f8fa;
     font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: #222;
 }
 
-/* 페이지 전체 감싸는 래퍼 */
 .wrap {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* 헤더, 푸터 영역 */
-#header {
-    flex-shrink: 0;
-}
-
-#footer {
-    flex-shrink: 0;
-}
-
-/* 컨텐츠 영역 */
-.container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.header {
     width: 100%;
+    background-color: #f6f7f9;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* ===== 반응형 ===== */
-@media (max-width: 480px) {
-    .container {
-        padding: 40px 16px;
-    }
+.footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f6f7f9;
+    border-top: 1px solid #dcdcdc;
+    color: #666;
+    font-size: 0.9rem;
 }
