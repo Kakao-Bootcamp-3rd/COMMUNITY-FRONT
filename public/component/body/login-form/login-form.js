@@ -27,5 +27,4 @@ export function renderLoginForm(rootEl) {
         <button type="submit" class="login-btn">로그인</button>
       </form>
     `;
-  }
-  
+}
