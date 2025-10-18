@@ -1,14 +1,72 @@
-.navigator {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #333;
+.navigator_inner {
+    position: relative;
+    width: 100%;
     text-align: center;
-    margin-top: 30px;
-
-}
-
-@media (max-width: 480px) {
-    .navigator {
-        font-size: 1.1rem;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #f9f6ff 0%, #f2edff 100%);
+    border-bottom: 1px solid rgba(180, 150, 255, 0.2);
+    box-shadow: 0 2px 10px rgba(180, 150, 255, 0.25);
+  }
+  
+  /* 타이틀 */
+  .navigator_title {
+    display: inline-block;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  
+    /* 💜 밝은 보라 그라데이션 */
+    background: linear-gradient(90deg, #b185ff, #9b6bff, #7f5eff, #4a00e0);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    animation: lightSpaceGradient 6s ease infinite;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  
+  /* hover 효과 */
+  .navigator_title:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  /* 그라데이션 이동 애니메이션 */
+  @keyframes lightSpaceGradient {
+    0% { background-position: 0% center; }
+    50% { background-position: 100% center; }
+    100% { background-position: 0% center; }
+  }
+  
+  /* 미세한 반짝임 효과 (선택사항) */
+  .navigator_inner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.4) 0%, transparent 70%),
+                radial-gradient(circle at 70% 50%, rgba(255,255,255,0.4) 0%, transparent 70%);
+    opacity: 0.3;
+    transform: translateX(-50%);
+    animation: shimmer 5s linear infinite alternate;
+  }
+  
+  @keyframes shimmer {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.45; }
+    100% { opacity: 0.2; }
+  }
+  
+  /* 반응형 */
+  @media (max-width: 480px) {
+    .navigator_title {
+      font-size: 1.4rem;
+      letter-spacing: 1px;
     }
-}
+  }
+  
