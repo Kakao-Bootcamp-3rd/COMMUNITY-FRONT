@@ -1,8 +1,10 @@
-import { renderHeader } from "../../../component/auth/header/header.js";
-import { renderLoginWrap } from "../../../component/auth/login_wrap/login_wrap.js";
-import { renderFooter} from "../../../component/common/footer/footer_inner.js";
-import { renderFindWrap} from "../../../component/auth/login_wrap/find_wrap.js";
-import { renderGladBanner } from "../../../component/auth/gladbanner/gladbanner.js";
+import { renderHeader } from "/component/auth/header/header.js";
+import { renderLoginWrap } from "/component/auth/login_wrap/login_wrap.js";
+import { renderFooter} from "/component/common/footer/footer_inner.js";
+import { renderFindWrap} from "/component/auth/login_wrap/find_wrap.js";
+import { renderGladBanner } from "/component/auth/gladbanner/gladbanner.js";
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header")
@@ -17,4 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderFindWrap(find_wrap);
   renderGladBanner(gladbanner);
   renderFooter(footer)
+
+
+  // 랜더링 후 바인딩 함수들
 });

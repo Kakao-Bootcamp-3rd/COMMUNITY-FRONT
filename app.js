@@ -1,11 +1,18 @@
-const express = require('express')
-const app = express()
-const port = 3000
+// app.js
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const app = express();
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/pages/auth/login/login.html"));
+});
+
+app.listen(3000, () => console.log("✅ Server running at http://localhost:3000/login"));
