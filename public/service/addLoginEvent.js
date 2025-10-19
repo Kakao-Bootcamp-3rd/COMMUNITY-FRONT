@@ -28,13 +28,13 @@ export function addLoginEvent() {
             if (response.ok && result.status === 200) {
                 const token = result.data?.accessToken;
 
-                // ✅ JWT 토큰만 저장
+                //  JWT 토큰 저장
                 if (token) {
                     localStorage.setItem("accessToken", token);
                 }
 
-                alert(result.message || "로그인 성공!");
-                // ✅ 로그인 후 바로 메인 페이지로 이동
+                // 로그인 후 바로 메인 페이지로 이동
+                window.location.href = "/pages/main/main.html";
             } else {
                 alert(result.message || "로그인 실패");
             }
