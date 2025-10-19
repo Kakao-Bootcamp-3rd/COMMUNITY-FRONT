@@ -4,6 +4,7 @@ import { renderFooter} from "/component/common/footer/footer_inner.js";
 import { renderFindWrap} from "/component/auth/login_wrap/find_wrap.js";
 import { renderGladBanner } from "/component/auth/gladbanner/gladbanner.js";
 
+import {addLoginEvent} from "/service/addLoginEvent.js"
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -18,8 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderLoginWrap(login_wrap);
   renderFindWrap(find_wrap);
   renderGladBanner(gladbanner);
-  renderFooter(footer)
+  renderFooter(footer);
 
 
   // 랜더링 후 바인딩 함수들
+  addLoginEvent();
 });
