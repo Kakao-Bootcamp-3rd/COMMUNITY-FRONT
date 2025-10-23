@@ -1,10 +1,10 @@
-import { renderHeader } from "/component/auth/header/header.js";
+import { renderHeader } from "/component/auth/header/header_inner.js";
 import { renderLoginWrap } from "/component/auth/login_wrap/login_wrap.js";
 import { renderFooter} from "/component/common/footer/footer_inner.js";
 import { renderFindWrap} from "/component/auth/login_wrap/find_wrap.js";
 import { renderGladBanner } from "/component/auth/gladbanner/gladbanner.js";
 
-import {addLoginEvent} from "/service/addLoginEvent.js"
+import {addLoginEvent} from "/service/auth/addLoginEvent.js"
 
 
 document.addEventListener("DOMContentLoaded", () => {
