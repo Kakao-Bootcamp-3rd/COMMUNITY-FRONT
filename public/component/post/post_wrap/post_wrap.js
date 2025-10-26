@@ -25,7 +25,7 @@ export function renderPostWrap(rootEl) {
     <div class="post-wrap">
       <div class="post-wrap__header">
         <span class="post-wrap__greeting">안녕하세요, 아무 말 대잔치 게시판입니다.</span>
-        <button class="post-wrap__add-btn" onclick="location.href='/posts/create'">게시글 작성</button>
+        <button class="post-wrap__add-btn" onclick="location.href='/posts/write'">게시글 작성</button>
       </div>
       <div class="post-wrap__list">
         ${postsHTML}
@@ -34,5 +34,24 @@ export function renderPostWrap(rootEl) {
   `;
 
     // 이벤트 바인딩
+    bindEvents(rootEl);
 }
 
+// 이벤트 바인딩 함수
+function bindEvents(rootEl) {
+    // 게시글 작성 버튼 이벤트
+    const addBtn = rootEl.querySelector('.post-wrap__add-btn');
+    addBtn?.addEventListener('click', () => {
+        window.location.href = '/posts/write';
+    });
+
+    // 게시글 클릭 이벤트
+    const postItems = rootEl.querySelectorAll('.post-item');
+    postItems.forEach(item => {
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', () => {
+            const postId = item.getAttribute('data-post-id');
+            window.location.href = `/posts/${postId}`;
+        });
+    });
+}
