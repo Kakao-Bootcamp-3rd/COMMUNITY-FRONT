@@ -1,17 +1,13 @@
 import express from "express";
 import path from "path";
-import { fileURLToPath } from "url";
+import { rootDir } from "./utils/path.js";
+import authRoutes from "./routes/authRoutes.js";
+import postRoutes from "./routes/postRoutes.js";
 
 const app = express();
 
-const __filename = fileURLToPath(import.meta.url);
+app.use(express.static(path.join(rootDir, "public")));
+app.use("/", authRoutes);
+app.use("/", postRoutes);
 
-const __dirname = path.dirname(__filename);
-
-app.use(express.static(path.join(__dirname, "public")));
-
-app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/pages/auth/login/login.html"));
-});
-
-app.listen(3000, () => console.log("✅ Server running at http://localhost:3000/login"));
+app.listen(3000);

@@ -1,0 +1,27 @@
+import express from "express";
+import path from "path";
+import { rootDir } from "../utils/path.js";
+
+const router = express.Router();
+
+// 게시글 목록 페이지
+router.get("/posts", (req, res) => {
+  res.sendFile(path.join(rootDir, "public/pages/post/postList/postList.html"));
+});
+
+// 게시글 상세 페이지
+router.get("/posts/:id", (req, res) => {
+  res.sendFile(path.join(rootDir, "public/pages/post/detail/detail.html"));
+});
+
+// 게시글 작성 페이지
+router.get("/posts/create", (req, res) => {
+  res.sendFile(path.join(rootDir, "public/pages/post/create/create.html"));
+});
+
+// 게시글 수정 페이지
+router.get("/posts/:id/edit", (req, res) => {
+  res.sendFile(path.join(rootDir, "public/pages/post/edit/edit.html"));
+});
+
+export default router;

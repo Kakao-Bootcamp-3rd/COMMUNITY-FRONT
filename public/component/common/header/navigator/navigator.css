@@ -1,11 +1,23 @@
 .navigator_inner {
     position: relative;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
     background: linear-gradient(135deg, #f9f6ff 0%, #f2edff 100%);
     border-bottom: 1px solid rgba(180, 150, 255, 0.2);
     box-shadow: 0 2px 10px rgba(180, 150, 255, 0.25);
+  }
+
+  .navigator_left {
+    flex: 1;
+  }
+
+  .navigator_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
   }
   
   /* 타이틀 */
@@ -16,6 +28,8 @@
     font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+    text-align: center;
+    flex: 1;
   
     /* 💜 밝은 보라 그라데이션 */
     background: linear-gradient(90deg, #b185ff, #9b6bff, #7f5eff, #4a00e0);
@@ -62,11 +76,134 @@
     100% { opacity: 0.2; }
   }
   
+  /* 프로필 드롭다운 */
+  .profile_dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .profile_btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(180, 150, 255, 0.3);
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(180, 150, 255, 0.2);
+  }
+
+  .profile_btn:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(180, 150, 255, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .profile_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .profile_name {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+  }
+
+  .dropdown_arrow {
+    font-size: 0.8rem;
+    color: #666;
+    transition: transform 0.3s ease;
+  }
+
+  .profile_btn:hover .dropdown_arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown_menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid rgba(180, 150, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    min-width: 200px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    margin-top: 8px;
+  }
+
+  .dropdown_menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .dropdown_item:hover {
+    background-color: #f8f9ff;
+  }
+
+  .dropdown_icon {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+  }
+
+  .dropdown_divider {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid #e9ecef;
+  }
+
+  .logout_btn {
+    color: #dc3545 !important;
+  }
+
+  .logout_btn:hover {
+    background-color: #fff5f5 !important;
+  }
+
   /* 반응형 */
   @media (max-width: 480px) {
     .navigator_title {
       font-size: 1.4rem;
       letter-spacing: 1px;
+    }
+
+    .navigator_inner {
+      padding: 15px 20px;
+    }
+
+    .profile_name {
+      display: none;
+    }
+
+    .dropdown_menu {
+      min-width: 180px;
     }
   }
   

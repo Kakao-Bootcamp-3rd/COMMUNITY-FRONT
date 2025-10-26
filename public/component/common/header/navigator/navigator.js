@@ -1,7 +1,9 @@
 export function renderNavigator(rootEl) {
   rootEl.innerHTML = `
     <div class="navigator_inner">
-      <h1 class="navigator_title">Our Space</h1>
+      <a href="/posts">
+          <h1 class="nav_logo" id = "nav_logo" >NOT ME</h1>
+        </a>
     </div>
   `;
 }
