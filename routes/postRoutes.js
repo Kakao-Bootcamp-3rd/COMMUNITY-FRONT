@@ -14,10 +14,10 @@ router.get("/posts", (req, res) => {
 router.get("/posts/:id", (req, res) => {
   res.sendFile(path.join(rootDir, "public/pages/post/post_detail/post_detail.html"));
 });
-// 게시글 작성 페이지
-router.get("/posts/create", (req, res) => {
-  res.sendFile(path.join(rootDir, "public/pages/post/create/create.html"));
-});
+// // 게시글 작성 페이지
+// router.get("/posts/write", (req, res) => {
+//   res.sendFile(path.join(rootDir, "public/pages/post/post_write/post_write.html"));
+// });
 
 // 게시글 수정 페이지
 router.get("/posts/:id/edit", (req, res) => {

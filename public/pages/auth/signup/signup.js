@@ -1,7 +1,7 @@
 import { renderHeader } from "/component/auth/header/header_inner.js";
 import { renderSignupWrap } from "/component/auth/signup_wrap/signup_wrap.js";
-import { renderFooter } from "/component/common/footer/footer_inner.js";
 import { renderGladBanner } from "/component/auth/gladbanner/gladbanner.js";
+import { renderFooter } from "/component/auth/footer/footer_inner.js";
 
 import { addSignupEvent } from "/service/auth/addSignupEvent.js";
 
