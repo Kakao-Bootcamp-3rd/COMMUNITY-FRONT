@@ -9,11 +9,11 @@ router.get("/posts", (req, res) => {
   res.sendFile(path.join(rootDir, "public/pages/post/postList/postList.html"));
 });
 
-// 게시글 상세 페이지
+
+// 게시글 상세 페이지   </head>http://localhost:3000/posts/1
 router.get("/posts/:id", (req, res) => {
   res.sendFile(path.join(rootDir, "public/pages/post/post_detail/post_detail.html"));
 });
-
 // 게시글 작성 페이지
 router.get("/posts/create", (req, res) => {
   res.sendFile(path.join(rootDir, "public/pages/post/create/create.html"));
