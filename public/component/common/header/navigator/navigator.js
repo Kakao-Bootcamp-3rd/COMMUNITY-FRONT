@@ -15,7 +15,7 @@ export function renderNavigator(rootEl) {
             </div>
           </button>
           <div class="dropdown_menu" id="dropdownMenu">
-            <a href="../users/profile" class="dropdown_item">
+            <a href="/account" class="dropdown_item">
               <span class="dropdown_icon">👤</span>
               프로필
             </a>
@@ -23,7 +23,7 @@ export function renderNavigator(rootEl) {
               <span class="dropdown_icon">⚙️</span>
               설정
             </a>
-            <a href="../users/change-password" class="dropdown_item">
+            <a href="/password" class="dropdown_item">
               <span class="dropdown_icon">🔒</span>
               비밀번호 변경
             </a>
