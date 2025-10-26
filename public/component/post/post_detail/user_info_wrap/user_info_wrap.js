@@ -10,7 +10,7 @@ export function renderUserInfoWrap(container) {
             </div>
           </div>
           <div class="action_buttons">
-            <button class="btn_follow">수정</button>
+          <button class="btn_follow" onclick="location.href='/posts/1/edit'">수정</button>
             <button class="btn_message">삭제</button>
           </div>
         </div>

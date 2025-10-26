@@ -21,7 +21,7 @@ router.get("/posts/create", (req, res) => {
 
 // 게시글 수정 페이지
 router.get("/posts/:id/edit", (req, res) => {
-  res.sendFile(path.join(rootDir, "public/pages/post/edit/edit.html"));
+  res.sendFile(path.join(rootDir, "public/pages/post/post_modify/post_modify.html"));
 });
 
 export default router;
