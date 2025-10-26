@@ -1,64 +1,135 @@
-.footer_inner {
-  width: 100%;
-  text-align: center;
-  padding: 30px 0 36px;
-  background-color: #fff; /* 완전 흰색 배경 */
-  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+/* NOT ME 푸터 스타일 */
+
+.footer {
+  background: white;
+  border-top: 1px solid rgba(124, 92, 255, 0.1);
+  margin-top: 80px;
 }
 
-/* 상단 링크 */
+.footer_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 30px;
+}
+
+/* 푸터 상단 - 4단 그리드 */
+.footer_content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(124, 92, 255, 0.1);
+}
+
+/* 브랜드 섹션 */
+.footer_brand {
+  max-width: 350px;
+}
+
+.footer_logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.footer_description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.footer_socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social_link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.social_link:hover {
+  background: #f5f5f5;
+  border-color: #7c5cff;
+}
+
+/* 푸터 섹션 */
+.footer_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
 .footer_links {
-  margin-bottom: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .footer_links a {
-  font-size: 0.9rem;
-  color: #777;
+  font-size: 14px;
+  color: #666;
   text-decoration: none;
-  margin: 0 6px;
   transition: color 0.2s ease;
 }
 
 .footer_links a:hover {
-  color: #7f5eff;
+  color: #7c5cff;
 }
 
-.footer_links .divider {
-  color: #ccc;
-  margin: 0 6px;
+/* 푸터 하단 - 양쪽 정렬 */
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* 하단 브랜드 정보 */
-.footer_brand {
-  font-size: 0.85rem;
-  color: #888;
+.footer_copyright {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
 }
 
-.brand_name {
-  font-weight: 800;
-  color: #7f5eff; /* OUR SPACE 포인트 컬러 */
-  margin-right: 6px;
-  font-size: 1rem;
-  letter-spacing: 0.3px;
-}
-
-.copyright {
-  color: #555;
-  font-size: 0.85rem;
+.footer_contact {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
 }
 
 /* 반응형 */
-@media (max-width: 480px) {
-  .footer_links a {
-    font-size: 0.8rem;
-  }
-
-  .brand_name {
-    display: block;
-    margin-bottom: 4px;
+@media (max-width: 768px) {
+  .footer_content {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .footer_brand {
-    line-height: 1.4;
+    max-width: 100%;
+  }
+  
+  .footer_bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
   }
 }

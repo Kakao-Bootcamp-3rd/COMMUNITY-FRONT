@@ -60,4 +60,17 @@ export function renderNavigator(rootEl) {
       window.location.href = '../login';
     }
   });
+
+
+  // // 회원가입 버튼 이벤트
+  // const signupBtn = document.getElementById('signupBtn');
+  // signupBtn.addEventListener('click', () => {
+  //   window.location.href = '/signup';
+  // });
+
+  // // 로그인 버튼 이벤트
+  // const loginBtn = document.getElementById('loginBtn');
+  // loginBtn.addEventListener('click', () => {
+  //   window.location.href = '/login';
+  // });
 }

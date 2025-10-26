@@ -1,60 +1,65 @@
 /* 개별 게시글 카드 스타일 */
 .post-item {
-    background: white;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 12px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border: 1px solid #eee;
-    transition: all 0.2s ease;
-}
-
-.post-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 20px rgba(124, 92, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .post-item:hover {
+    box-shadow: 0 8px 28px rgba(124, 92, 255, 0.15);
     transform: translateY(-2px);
-    border-color: #ddd;
-}
-
-.post-item__header {
+    border-color: rgba(124, 92, 255, 0.3);
+  }
+  
+  .post-item__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
-}
-
-.post-item__title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-
-.post-item__date {
+    margin-bottom: 14px;
+  }
+  
+  .post-item__title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2a2a2a;
+    letter-spacing: -0.2px;
+  }
+  
+  .post-item__date {
     font-size: 12px;
-    color: #999;
-}
-
-.post-item__stats {
+    color: #9999aa;
+    font-weight: 500;
+  }
+  
+  .post-item__stats {
     display: flex;
-    gap: 12px;
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 12px;
-}
-
-.post-item__author {
+    gap: 14px;
+    font-size: 13px;
+    color: #666677;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  
+  .post-item__author {
     display: flex;
     align-items: center;
-    gap: 8px;
-}
-
-.post-item__author-img {
-    width: 32px;
-    height: 32px;
+    gap: 10px;
+  }
+  
+  .post-item__author-img {
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
-    background: #ddd;
-}
-
-.post-item__author-name {
+    background: linear-gradient(135deg, #7c5cff 0%, #9b7aff 100%);
+  }
+  
+  .post-item__author-name {
     font-size: 14px;
-    color: #666;
-}
+    color: #4a4a4a;
+    font-weight: 600;
+  }

@@ -51,7 +51,7 @@ function bindEvents(rootEl) {
         item.style.cursor = 'pointer';
         item.addEventListener('click', () => {
             const postId = item.getAttribute('data-post-id');
-            window.location.href = `/post/${postId}`;
+            window.location.href = `/posts/${postId}`;
         });
     });
 }
