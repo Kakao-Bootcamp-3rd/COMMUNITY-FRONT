@@ -1,0 +1,41 @@
+/* 게시글 목록 전체 컨테이너 */
+.post-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+.post-wrap__header {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-wrap__greeting {
+    font-size: 14px;
+    color: #666;
+}
+
+.post-wrap__add-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.post-wrap__add-btn:hover {
+    background: #ff5252;
+}
+
+.post-wrap__list {
+    /* 게시글들이 들어갈 컨테이너 */
+}
