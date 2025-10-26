@@ -1,4 +1,4 @@
-/* post_modify 페이지 전용 스타일 */
+/* account 페이지 전용 스타일 */
 
 /* 전역 리셋 */
 * {
@@ -21,6 +21,7 @@
   .wrap {
     min-height: 100vh;
     background: linear-gradient(180deg, #f8f9ff 0%, #e8ebff 100%);
+    padding: 40px 20px;
   }
   
   /* 헤더 */
@@ -36,38 +37,13 @@
   /* 컨테이너 */
   .container {
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
   }
   
-  /* 페이지 제목 */
-  .page_title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 700;
-    color: #212121;
-    margin-bottom: 32px;
-  }
-  
-  /* 각 섹션 공통 스타일 */
-  .info_wrap,
-  .title_wrap,
-  .article_wrap,
-  .image_wrap,
-  .modify_button_wrap {
-    background: #ffffff;
-    border-radius: 24px;
-    margin-bottom: 16px;
-    box-shadow: 0 2px 8px rgba(124, 92, 255, 0.08);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .info_wrap:hover,
-  .title_wrap:hover,
-  .article_wrap:hover,
-  .image_wrap:hover {
-    box-shadow: 0 4px 16px rgba(124, 92, 255, 0.12);
+  /* account_wrap */
+  #account_wrap {
+    margin-top: 40px;
   }
   
   /* 푸터 */
@@ -82,20 +58,11 @@
   
   /* 반응형 */
   @media (max-width: 768px) {
-    .container {
-      padding: 16px;
+    .wrap {
+      padding: 20px 16px;
     }
   
-    .page_title {
-      font-size: 24px;
-      margin-bottom: 24px;
-    }
-  
-    .info_wrap,
-    .title_wrap,
-    .article_wrap,
-    .image_wrap,
-    .modify_button_wrap {
-      margin-bottom: 12px;
+    #account_wrap {
+      margin-top: 20px;
     }
   }
